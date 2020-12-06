@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <title>Color Flipper</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img class="logo" src="images/colorflipperlogo.jpg" alt="Color Flipper Logo">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+            <ul>
+                <li><a class="active" href="#">Simple</a></li>
+                <li><a href="hex/index.html">Hex</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="first">
+        <h2>background color : <span class="color">
+        #f1f5f8
+      </span></h2>
+
+        <button class="button" id="btn">Change the color of the background</button><br><br><br>
+    </div>
+
+    <div class="second">
+        <h2>text color : <span class="text">
+        black
+      </span></h2>
+
+        <button class="button" id="txtbtn">Change the color of the text</button><br>
+    </div>
+
+    <div class="second">
+        <button class="button" id="both">Change both colors</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

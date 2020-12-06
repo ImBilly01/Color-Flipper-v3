@@ -1,0 +1,169 @@
+:root {
+    --body-color: #161816;
+    --nav-color: #242524;
+    --blue-color: #1b9bff;
+    --nav-color: #2c2c2c;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    transition: background-color 0.77s ease-in-out;
+    background-color: var(--body-color);
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    line-height: 1.7;
+}
+
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    transition: color 1.05s ease-in-out;
+}
+
+.button {
+    width: 220px;
+    height: 50px;
+    position: absolute;
+    outline: none;
+    border-style: ridge;
+    color: white;
+    background: #161616;
+    font-size: 12px;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.button:hover {
+    background-color: #c4c4c4;
+    color: #161616;
+    /* transition: color 1.27s ease-in-out; */
+    transition: background-color 0.47s ease-in-out;
+}
+
+nav {
+    background: var(--nav-color);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0% 2.5%;
+}
+
+img {
+    border-radius: 50%;
+    max-width: 100%;
+}
+
+.logo {
+    height: calc(4vw + 1rem);
+    cursor: pointer;
+    margin-left: 35px;
+    user-select: none;
+}
+
+nav>ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 5vh 1vw;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1vw;
+    padding: 0.5vw 1vw;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+a.active,
+a:hover {
+    background: var(--blue-color);
+    transition: background .5s;
+}
+
+.checkbtn {
+    font-size: calc(4vw + 1rem);
+    /*made size equal coop logo size, so there is a consistent nav size*/
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+    nav>ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - calc(4vw + 1rem));
+        /*calc(4vw + 1rem) = height of logo/nav bar*/
+        background: #212221;
+        top: 80px;
+        left: -1000%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 5;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+    .no-scroll {
+        overflow-y: hidden;
+    }
+}
+
+.first {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+}
+
+.second {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.button {
+    margin-left: -109px;
+    margin-top: 22px;
+    text-align: center;
+}
